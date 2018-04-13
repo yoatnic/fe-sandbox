@@ -1,0 +1,43 @@
+import React from "react";
+import { List } from "office-ui-fabric-react/lib/List";
+import { ScrollablePane } from "office-ui-fabric-react/lib/ScrollablePane";
+const cell = ({ index }) => {
+  const styleOuter = {
+    width: `${100 / 4}%`,
+    position: "relative",
+    float: "left",
+    padding: "2px"
+  };
+  const styleInner = {
+    border: "solid 1px"
+  };
+  return (
+    <div style={styleOuter}>
+      <div style={styleInner}>
+        <p>title{index}</p>
+        <p>body</p>
+      </div>
+    </div>
+  );
+};
+
+const OfficeUIFablic = () => {
+  const items = new Array(100);
+  for (let i = 0; i < items.length; i++) {
+    items[i] = { index: i };
+  }
+  const style = {};
+  return (
+    <ScrollablePane style={{ height: "500px" }}>
+      <List
+        items={items}
+        getItemCountForPage={() => 10}
+        getPageHeight={() => 500}
+        renderedWindowsAhead={4}
+        onRenderCell={cell}
+      />
+    </ScrollablePane>
+  );
+};
+
+export default OfficeUIFablic;
