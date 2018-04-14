@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { List } from "office-ui-fabric-react/lib/List";
 import { ScrollablePane } from "office-ui-fabric-react/lib/ScrollablePane";
-const cell = ({ index }) => {
+
+const cell = props => {
   const styleOuter = {
     width: `${100 / 4}%`,
     position: "relative",
@@ -14,11 +16,15 @@ const cell = ({ index }) => {
   return (
     <div style={styleOuter}>
       <div style={styleInner}>
-        <p>title{index}</p>
+        <p>title{props.index}</p>
         <p>body</p>
       </div>
     </div>
   );
+};
+
+cell.propTypes = {
+  index: PropTypes.number
 };
 
 const OfficeUIFablic = () => {
