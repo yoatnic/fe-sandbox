@@ -32,7 +32,6 @@ const OfficeUIFablic = () => {
   for (let i = 0; i < items.length; i++) {
     items[i] = { index: i };
   }
-  const style = {};
   return (
     <ScrollablePane style={{ height: "500px" }}>
       <List
