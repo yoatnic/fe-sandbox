@@ -4,8 +4,8 @@
 
 import React from "react";
 import WithState from "../atoms/WithState";
+import type { State } from "../atoms/WithState";
 
-type State = { value: string };
 const initialState: State = { value: "" };
 
 const WrappedComponent = () => {

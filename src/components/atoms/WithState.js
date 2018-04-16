@@ -1,6 +1,8 @@
 //@flow
 import React, { type Node } from "react";
 
+export type State = { value: string };
+
 // Generic State Manager
 export default class WithState<State> extends React.Component<
   {
@@ -9,7 +11,7 @@ export default class WithState<State> extends React.Component<
   },
   State
 > {
-  constructor(props) {
+  constructor(props: { initialState: State }) {
     super();
     this.state = props.initialState;
   }
