@@ -21,11 +21,11 @@ export const itemsReducer = (
   switch (action.type) {
   case REQUEST_NEXT_ITEMS:
     return Object.assign({}, state, {
-      lastItemId: (action: RequestItemAction).lastItemId
+      lastItemId: (action: RequestItemAction).payload.lastItemId
     });
   case RECEIVE_NEXT_ITEMS:
     return Object.assign({}, state, {
-      items: [...state.items, ...(action: ReceiveItemAction).items]
+      items: [...state.items, ...(action: ReceiveItemAction).payload.items]
     });
   default:
     return state;

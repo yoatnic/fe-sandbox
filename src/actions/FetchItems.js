@@ -9,18 +9,28 @@ export type Item = {
 
 export type RequestItemAction = {
   type: string,
-  lastItemId: number
+  payload: {
+    lastItemId: number
+  }
 };
 
 export type ReceiveItemAction = {
   type: string,
-  items: Array<Item>
+  payload: {
+    items: Array<Item>
+  }
 };
 
 export const requestNextItems = (lastItemId: number): RequestItemAction => {
-  return { type: REQUEST_NEXT_ITEMS, lastItemId };
+  return {
+    type: REQUEST_NEXT_ITEMS,
+    payload: { lastItemId }
+  };
 };
 
 export const receiveNextItems = (items: Array<Item>): ReceiveItemAction => {
-  return { type: RECEIVE_NEXT_ITEMS, items };
+  return {
+    type: RECEIVE_NEXT_ITEMS,
+    payload: { items }
+  };
 };
