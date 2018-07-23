@@ -1,3 +1,7 @@
 self.addEventListener("install", function(event) {
-  console.log("installed");
+  event.waitUntil(
+    caches.open("test-cache").then(function(cache) {
+      console.log("Opened cache", cache);
+    })
+  );
 });
