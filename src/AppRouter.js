@@ -5,6 +5,7 @@ import RenderProps from "./components/pages/RenderProps";
 import OfficeUIFablic from "./components/pages/OfficeUIFablic";
 import Mobx from "./components/pages/Mobx";
 import ReduxEffectsSteps from "./components/pages/ReduxEffectsSteps";
+import Blueprint from "./components/pages/Blueprint";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const AppIndex = () => {
@@ -28,6 +29,9 @@ const AppIndex = () => {
         </li>
         <li>
           <Link to="/redux-effects-steps">redux-effects-steps</Link>
+        </li>
+        <li>
+          <Link to="/blueprint">blueprint</Link>
         </li>
       </ul>
     </div>
@@ -53,6 +57,7 @@ const AppRouter = (props: any) => {
           path="/redux-effects-steps"
           render={() => <ReduxEffectsSteps {...props} />}
         />
+        <Route path="/blueprint" render={() => <Blueprint {...props} />} />
       </div>
     </BrowserRouter>
   );
