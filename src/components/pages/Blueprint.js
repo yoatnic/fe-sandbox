@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Intent, Spinner } from "@blueprintjs/core";
+import { Button, Intent, Spinner, Card, Elevation } from "@blueprintjs/core";
 import { Table, Column, Cell } from "@blueprintjs/table";
 import { DatePicker } from "@blueprintjs/datetime";
 import { Example } from "@blueprintjs/docs-theme";
@@ -23,6 +23,13 @@ const Blueprint = () => {
           <Column name="Dollars" cellRenderer={cellRenderer} />
         </Table>
         <DatePicker />
+        <Card interactive={true} elevation={Elevation.TWO}>
+          <h5>
+            <a href="#">Card heading</a>
+          </h5>
+          <p>Card content</p>
+          <Button>Submit</Button>
+        </Card>
       </Example>
     </div>
   );
