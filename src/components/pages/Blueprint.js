@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Intent, Spinner, Card, Elevation } from "@blueprintjs/core";
+import {
+  Button,
+  Intent,
+  Spinner,
+  Card,
+  Elevation,
+  EditableText
+} from "@blueprintjs/core";
 import { Table, Column, Cell } from "@blueprintjs/table";
 import { DatePicker } from "@blueprintjs/datetime";
 import { Example } from "@blueprintjs/docs-theme";
@@ -30,6 +37,7 @@ const Blueprint = () => {
           <p>Card content</p>
           <Button>Submit</Button>
         </Card>
+        <EditableText multiline={true} minLines={3} maxLines={12} />
       </Example>
     </div>
   );
