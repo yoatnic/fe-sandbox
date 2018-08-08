@@ -1,11 +1,13 @@
 import React from "react";
 import {
-  Button,
   Intent,
   Spinner,
   Card,
   Elevation,
-  EditableText
+  EditableText,
+  ButtonGroup,
+  AnchorButton,
+  Button
 } from "@blueprintjs/core";
 import { Table, Column, Cell } from "@blueprintjs/table";
 import { DatePicker } from "@blueprintjs/datetime";
@@ -38,6 +40,11 @@ const Blueprint = () => {
           <Button>Submit</Button>
         </Card>
         <EditableText multiline={true} minLines={3} maxLines={12} />
+        <ButtonGroup minimal={true}>
+          <Button icon="database">Queries</Button>
+          <Button icon="function">Functions</Button>
+          <AnchorButton rightIcon="caret-down">Options</AnchorButton>
+        </ButtonGroup>
       </Example>
     </div>
   );
