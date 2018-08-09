@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  Alignment,
+  Navbar,
   Intent,
   Spinner,
   Card,
@@ -26,6 +28,14 @@ const Blueprint = () => {
   return (
     <div>
       <Example options={false} showOptionsBelowExample={true}>
+        <Navbar>
+          <Navbar.Group align={Alignment.LEFT}>
+            <Navbar.Heading>Blueprint</Navbar.Heading>
+            <Navbar.Divider />
+            <Button className="bp3-minimal" icon="home" text="Home" />
+            <Button className="bp3-minimal" icon="document" text="Files" />
+          </Navbar.Group>
+        </Navbar>
         <Spinner intent={Intent.PRIMARY} />
         <Button intent={Intent.SUCCESS}>button</Button>
         <Table numRows={10}>
