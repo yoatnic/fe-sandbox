@@ -9,7 +9,9 @@ import {
   EditableText,
   ButtonGroup,
   AnchorButton,
-  Button
+  Button,
+  Tab,
+  Tabs
 } from "@blueprintjs/core";
 import { Table, Column, Cell } from "@blueprintjs/table";
 import { DatePicker } from "@blueprintjs/datetime";
@@ -55,6 +57,12 @@ const Blueprint = () => {
           <Button icon="function">Functions</Button>
           <AnchorButton rightIcon="caret-down">Options</AnchorButton>
         </ButtonGroup>
+        <Tabs id="TabsExample">
+          <Tab id="ng" title="Angular" panel={<div>Angular</div>} />
+          <Tab id="mb" title="Ember" panel={<div>Ember</div>} />
+          <Tab id="rx" title="React" panel={<div>React</div>} />
+          <Tab id="bb" disabled title="Backbone" panel={<div>Backbone</div>} />
+        </Tabs>
       </Example>
     </div>
   );
