@@ -63,6 +63,27 @@ const Blueprint = () => {
           <Tab id="rx" title="React" panel={<div>React</div>} />
           <Tab id="bb" disabled title="Backbone" panel={<div>Backbone</div>} />
         </Tabs>
+        <ul className="bp3-breadcrumbs">
+          <li>
+            <a className="bp3-breadcrumbs-collapsed" href="#" />
+          </li>
+          <li>
+            <a className="bp3-breadcrumb bp3-disabled">Folder one</a>
+          </li>
+          <li>
+            <a className="bp3-breadcrumb" href="#">
+              Folder two
+            </a>
+          </li>
+          <li>
+            <a className="bp3-breadcrumb" href="#">
+              Folder three
+            </a>
+          </li>
+          <li>
+            <span className="bp3-breadcrumb bp3-breadcrumb-current">File</span>
+          </li>
+        </ul>
       </Example>
     </div>
   );
