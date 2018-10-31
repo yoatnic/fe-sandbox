@@ -6,6 +6,7 @@ import OfficeUIFablic from "./components/pages/OfficeUIFablic";
 import Mobx from "./components/pages/Mobx";
 import ReduxEffectsSteps from "./components/pages/ReduxEffectsSteps";
 import Blueprint from "./components/pages/Blueprint";
+import Hooks from "./components/pages/Hooks";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const AppIndex = () => {
@@ -15,6 +16,9 @@ const AppIndex = () => {
         <h1>Index</h1>
       </header>
       <ul>
+        <li>
+          <Link to="/hooks">Rect Hooks</Link>
+        </li>
         <li>
           <Link to="/infinity-scroll">infinity scroll</Link>
         </li>
@@ -43,6 +47,7 @@ const AppRouter = (props: any) => {
     <BrowserRouter>
       <div>
         <Route exact path="/" component={AppIndex} />
+        <Route path="/hooks" render={() => <Hooks {...props} />} />
         <Route
           path="/infinity-scroll"
           render={() => <InfinityScroll {...props} />}
